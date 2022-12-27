@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Veracode_SCA_Agent_Based
         env:
-          SRCCLR_API_TOKEN: ${{ secrets.SCA }}
+          SRCCLR_API_TOKEN: "${{ secrets.SCA }}"
         run: |
           curl -sSL 'https://download.sourceclear.com/ci.sh' | bash -s – scan --update-advisor --allow-dirty
                     
